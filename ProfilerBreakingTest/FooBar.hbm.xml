@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="ProfilerBreakingTest"
+                   assembly="ProfilerBreakingTest">
+  
+  <class name="Foo">
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+    <property name="FooData"></property>
+  </class>
+  
+  <class name="Bar">
+    <id name="Id">
+      <generator class="guid" />
+    </id>
+    <many-to-one name="FooReference" not-null="true" column="FooReferenceId"></many-to-one>
+    <property name="BarData"></property>
+  </class>
+  
+</hibernate-mapping>
